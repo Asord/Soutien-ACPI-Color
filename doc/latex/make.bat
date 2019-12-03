@@ -1,3 +1,4 @@
+@echo off
 set Dir_Old=%cd%
 cd /D %~dp0
 
