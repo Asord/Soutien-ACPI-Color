@@ -33,7 +33,12 @@ namespace Asemco
 
 
     void PNG::reserve(unsigned int height, unsigned int width) {
-        // définie une taille pour l'image représentée par cet objet
+        /**
+         * \brief réserve la place mémoire nécessaire pour stocker l'image prévue
+         *
+         * \arg height la hauteur de l'image (en pixels)
+         * \arg width la largeur de l'image (en pixels)
+         */
         this->_height = height;
         this->_width = width;
         this->_size = height * width;
