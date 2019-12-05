@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kernel_20',['Kernel',['../class_kernel.html#a4e8e99a94d7b283dd270abda0d1f3cbf',1,'Kernel']]]
+  ['gray_33',['gray',['../class_color.html#ab27a650fa3a00e6230f90123f5eb616c',1,'Color']]],
+  ['grayscale_34',['grayscale',['../class_color.html#ab10829adaf879ac0218fb541469bd371',1,'Color']]]
 ];

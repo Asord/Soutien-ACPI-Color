@@ -1,0 +1,79 @@
+@startuml
+class annonymousStruct <<(S,#008000)struct>> {
+    + _red: uint8_t 
+    + _green: uint8_t 
+    + _blue: uint8_t 
+    + _alpha: uint8_t 
+}
+class annonymousUnion <<(U, #0080FF)union>> {
+    + _: annonymousStruct
+    + _color: uint32_t 
+}
+annonymousStruct *-- annonymousUnion
+
+class Color {
+    + {static} Red: Color
+    + {static} Green: Color
+    + {static} Blue: Color
+    + {static} Yellow: Color
+    + {static} Cyan: Color
+    + {static} Magenta: Color
+    + {static} White: Color
+    + {static} Black: Color
+    ..
+    - _: annonymousUnion
+    --
+    + <<constructor>> Color()
+    + <<constructor>> Color(red: uint8_t, green: uint8_t, blue: uint8_t)
+    + <<constructor>> Color(red: uint8_t, green: uint8_t, blue: uint8_t, alpha: uint8_t)
+    + <<constructor>> Color(color: uint32_t)
+    ..
+    + getRed(): uint8_t
+    + getGreen(): uint8_t
+    + getBlue(): uint8_t
+    + getAlpha(): uint8_t
+    + getColor(): uint32_t
+    + setRed(red: uint8_t): void
+    + setGreen(green: uint8_t): void
+    + setBlue(blue: uint8_t): void
+    + setAlpha(alpha: uint8_t): void
+    + setColor(color: uint32_t): void
+    ..
+    + fromHue(hue: float): Color&
+    + fromHSV(hue: float, saturation: float, value: float): Color&
+    + toHSV(hue: float&, saturation: float&, value: float&): void
+
+    + random(seed: int): Color&
+    + randomColor(min: float, max: float, seed: int): Color&
+
+    + black(): Color&
+    + white(): Color&
+    + gray(shade: uint8_t): Color&
+    + grayscale(): Color&
+    + invert(): Color&
+
+    + coef(cRed: float, cGreen: float, cGreen: float); Color&
+    ..
+    +operator++(): Color
+    +operator--(): Color
+    
+    +operator+(rhs: const Color&) const: Color
+    +operator+=(rhs: const Color&): color& 
+    
+    +operator-(rhs: const Color&) const: Color 
+    +operator-=(rhs: const Color&): color& 
+    
+    +operator*(rhs: const float&) const: Color
+    +operator*=(rhs: const float&): Color&
+    
+    +operator/(rhs: const float&) const: Color
+    +operator/=(rhs: const float&): Color&
+    
+    +operator%(rhs: const uint8_t&) const: Color
+    +operator%=(rhs: const uint8_t&): Color&
+    
+    +operator==(rhs: const Color&) const: bool
+    +operator!=(rhs: const Color&) const: bool 
+}
+annonymousUnion *-- Color
+@enduml

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reserve_9',['reserve',['../class_asemco_1_1_p_n_g.html#ae945df0f2d8e11aebdca943b9a64f538',1,'Asemco::PNG']]]
+  ['kernel_12',['Kernel',['../class_kernel.html',1,'Kernel'],['../class_kernel.html#a4e8e99a94d7b283dd270abda0d1f3cbf',1,'Kernel::Kernel()']]]
 ];

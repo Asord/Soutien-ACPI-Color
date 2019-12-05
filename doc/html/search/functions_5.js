@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reserve_21',['reserve',['../class_asemco_1_1_p_n_g.html#ae945df0f2d8e11aebdca943b9a64f538',1,'Asemco::PNG']]]
+  ['invert_35',['invert',['../class_color.html#a05e824329ffed6d3116e725231dce496',1,'Color']]]
 ];
